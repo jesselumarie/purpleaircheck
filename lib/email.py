@@ -4,8 +4,8 @@ import smtplib, ssl
 from email.message import EmailMessage
 from datetime import date
 
-username = 'foo@gmail.com'
-password = 'sdfsafdasf'
+username = 'foo'
+password = 'bar'
 
 def send_email(message, subject, recipients):
     for recipient in recipients:
@@ -26,7 +26,8 @@ def send_email(message, subject, recipients):
             server.ehlo() # Can be omitted
             server.login(username, password)
 
-            server.send_message(msg)
+            print(message)
+            # server.send_message(msg)
         except Exception as e:
             # Print any error messages to stdout
             print(e)
