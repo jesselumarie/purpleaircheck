@@ -46,7 +46,7 @@ def get_text(sorted_sensors):
     message = (
         f"{color_to_emoji.get(avg_color)} Avg AQI: {formatted_average}\n\n"
         f"{color_to_emoji.get(get_color(minimum.aqi))} Min AQI: {formatted_min} {minimum.name}\n"
-        f"{color_to_emoji.get(get_color(minimum.aqi))} Max AQI: {formatted_max} {maximum.name}\n"
+        f"{color_to_emoji.get(get_color(maximum.aqi))} Max AQI: {formatted_max} {maximum.name}\n"
     )
 
     return [
